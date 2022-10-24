@@ -1,0 +1,14 @@
+[
+    {
+        "uid": "test",
+        "pwd": "$2y$10$YdI4mLnKYIVn9BMMXcmiO.wdGfDewgF\/dY8\/bOz9w2\/mU7SxdaIfG"
+    },
+    {
+        "uid": "test1",
+        "pwd": "$2y$10$c1uZjyNHsWymV\/OmOBIeYOPd6mCPr12zbRfIloDJw2Dt5WMCtO\/I2"
+    },
+    {
+        "uid": "test111",
+        "pwd": "$2y$10$IbtjMy6J3Wr99NHfMyOMreHkGxSuotQ2ain2STTLgmwiwtwLk.r3C"
+    }
+]

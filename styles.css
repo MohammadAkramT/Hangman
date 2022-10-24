@@ -1,0 +1,31 @@
+body {
+    font-family: 'Roboto';
+    text-align: center;
+    margin: auto;
+    background-color:#99cbec;
+}
+
+#header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2a6592;
+}
+
+#header li {
+    float: right;
+    border-left:1px solid #bbb;
+}
+
+#header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 45px;
+    text-decoration: none;
+}
+
+#header li a:hover:not(.active) {
+    background-color: #7e9a9a;
+  }
