@@ -20,7 +20,7 @@ class LoginUser {
             if ($this -> uid == $curr_user_info['uid']) {
                 if (password_verify($this -> pwd, $curr_user_info['pwd'])) {
                     $_SESSION['user'] = $this -> uid;
-                    header("location: game.php");
+                    header("location: hangman.php");
                     exit();
                 }
             }

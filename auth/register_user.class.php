@@ -9,17 +9,20 @@ class RegisterUser {
     private $new_user_info;
     public $success;
     public $error;
+    public $wins;
 
     public function __construct($uid, $pwd, $pwd_var) {
         $this -> uid = filter_var(trim($uid), FILTER_SANITIZE_STRING);
         $this -> raw_pwd = filter_var(trim($pwd), FILTER_SANITIZE_STRING);
         $this -> pwd_var = filter_var(trim($pwd_var), FILTER_SANITIZE_STRING);
         $this -> hashed_pwd = password_hash($this -> raw_pwd, PASSWORD_DEFAULT);
+        $this -> wins = 0;
 
         $this -> stored_users_info = json_decode(file_get_contents($this -> file_name), True);
         $this -> new_user_info = [
             "uid" => $this -> uid,
             "pwd" => $this -> hashed_pwd,
+            "wins" => $this -> wins
         ];
 
         $this -> insert_user();

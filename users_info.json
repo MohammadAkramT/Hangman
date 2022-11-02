@@ -1,14 +1,22 @@
 [
     {
-        "uid": "test",
-        "pwd": "$2y$10$YdI4mLnKYIVn9BMMXcmiO.wdGfDewgF\/dY8\/bOz9w2\/mU7SxdaIfG"
+        "uid": "Professor Chu",
+        "pwd": "$2y$10$21VVgRDdhQy84Bd.8D10z.odwgNcp6ONS4sho2KBWQtNex\/CgB89a",
+        "wins": 1738
     },
     {
-        "uid": "test1",
-        "pwd": "$2y$10$c1uZjyNHsWymV\/OmOBIeYOPd6mCPr12zbRfIloDJw2Dt5WMCtO\/I2"
+        "uid": "Justin",
+        "pwd": "$2y$10$LI0a3yDKL33nE3rOJxOJDuvtzPPlXUHPaHUz.s6AQbh.XSfZipRLW",
+        "wins": 69
     },
     {
-        "uid": "test111",
-        "pwd": "$2y$10$IbtjMy6J3Wr99NHfMyOMreHkGxSuotQ2ain2STTLgmwiwtwLk.r3C"
+        "uid": "Brendan",
+        "pwd": "$2y$10$LI0a3yDKL33nE3rOJxOJDuvtzPPlXUHPaHUz.s6AQbh.XSfZipRLW",
+        "wins": 420
+    },
+    {
+        "uid": "Mohammad",
+        "pwd": "$2y$10$LI0a3yDKL33nE3rOJxOJDuvtzPPlXUHPaHUz.s6AQbh.XSfZipRLW",
+        "wins": 135
     }
 ]

@@ -15,16 +15,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
     <title>Sign Up</title>
 </head>
 <body>
-    <?php
-        include_once "./header.php";
-    ?>
-    <h1>Hangman</h1>
-    <form action="" method="post" enctype="multipart/form-data">
-        <h2>Registration Form</h1>
+<div class="title-container">
+    <h1>Registration</h1>
+</div>
+
+
+    <div class="chalkboard-container">
+    <form action="" method="post" enctype="multipart/form-data" class="login-form">
         <h4>All fields are required</h4>
 
         <label for="uid">Username:</label>
@@ -41,5 +45,9 @@
         <p class="error"><?php echo @$user -> error; ?></p>
         <p class="success"><?php echo @$user -> success; ?></p>
     </form>
+    </div>
+<?php
+    include_once('footer.php');
+?>
 </body>
 </html>
