@@ -1,19 +1,21 @@
 <?php
-    session_start();
-    if (!isset($_SESSION['user'])) {
+session_start();
+    if (!isset($_SESSION['user']))
+    {
         header("location: log_in.php");
         exit();
+    }
 
-        if(isset($_GET['logout'])) {
-            unset($_SESSION['user']);
-            header("location: log_in.php");
-            exit();
-        }
+    if (isset($_GET['logout']))
+    {
+        unset($_SESSION['user']);
+        header("location: log_in.php");
+        exit();
     }
 ?>
 
 <?php
-/*___Initialize Global Variables___*/
+/*______Initialize Variables______*/
 
 $complete = false;
 $newWord = "";
@@ -29,10 +31,12 @@ $level = "Select";
 
 /*_____________Logic______________*/
 
+newGame();
+
 if(isset($_GET['pressed']))
 {
     $key = $_GET['pressed'] ? : null;
-    if($key && tryLetter($key) && !isDead() && !gameOver())
+    if(tryLetter($key) && !isDead() && !gameOver())
     {
         setLetter($key);
         if(isComplete())
@@ -242,29 +246,31 @@ function isDead()
 
 function gameOver()
 {
-    return isset($_SESSION["gameover"]) ? $_SESSION["gameover"] : false;
+    return isset($_SESSION['gameover']) ? $_SESSION['gameover'] : false;
 }
 
 /*_____________Setters_______________*/
 
 function newGame()
 {
-    session_destroy();
-    session_start();
+    unset($_SESSION['frames']);
+    unset($_SESSION['word']);
+    unset($_SESSION['guesses']);
+    $_SESSION['gameover'] = false;
 }
 
 function setAnimFrame()
 {
     $frame = getFrames();
     array_shift($frame);
-    $_SESSION["frames"] = $frame;
+    $_SESSION['frames'] = $frame;
 }
 
 function setLetter($letter)
 {
     $guess = getGuesses();
     $guess[] = $letter;
-    $_SESSION["guesses"] = $guess;
+    $_SESSION['guesses'] = $guess;
 }
 
 function setGameOver()
@@ -357,6 +363,17 @@ function setGameOver()
         ?>
     </div>
 
+<!--    <div class="used-letters-container">-->
+<!--        --><?php
+//        for ($i = 0; $i <= 7; $i++): $guess = getGuesses(); ?>
+<!--        --><?php //if(in_array($guess, getGuesses())): ?>
+<!--            <span>--><?php //echo $guess;?><!--</span>-->
+<!--            --><?php //else: ?>
+<!--                <span class="letter">&nbsp;&nbsp;</span>-->
+<!--            --><?php //endif; ?>
+<!--        --><?php //endfor; ?>
+<!--    </div>-->
+
     <div class="instructions-container">
         <p>Hangman is a word guessing game with a grim theme.</p>
         <p>Choose a letter. If you've chosen correctly, it will be displayed underneath the gallows.
@@ -373,7 +390,7 @@ function setGameOver()
             $alphabet = 25;
             for ($i = 0; $i <= $alphabet; $i++)
             {
-                echo '<button class="ltr-btn" type="submit" name="pressed" value=' . $keyboard[$i] . '>' . $keyboard[$i] . '</button>';
+                echo '<button class="ltr-btn" type="submit" name="pressed"  value=' . $keyboard[$i] . '>' . $keyboard[$i] . '</button>';
                 if ($i % 9 == 0 && $i > 0)
                 {
                     echo '<br>';
