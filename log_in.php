@@ -34,7 +34,7 @@
         <input type="text" name="uid" required>
 
         <label for="pwd">Password:</label>
-        <input type="text" name="pwd" required>
+        <input type="password" name="pwd" required>
 
         <button type="submit" name="submit">Log in</button>
 
