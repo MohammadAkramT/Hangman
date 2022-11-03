@@ -31,8 +31,6 @@ $level = "Select";
 
 /*_____________Logic______________*/
 
-newGame();
-
 if(isset($_GET['pressed']))
 {
     $key = $_GET['pressed'] ? : null;
