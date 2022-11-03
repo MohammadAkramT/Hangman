@@ -34,13 +34,13 @@
         <label for="uid">Username:</label>
         <input type="text" name="uid" required>
 
-        <label" for="pwd">Password:</label>
+        <label for="pwd">Password:</label>
         <input type="password" name="pwd" required>
 
         <label for="pwd_var">Verify password:</label>
         <input type="password" name="pwd_var" required>
 
-        <button type="submit" name="submit">Register</button>
+        <button type="submit" name="submit" class="ltr-btn register-btn">Register</button>
 
         <p class="error"><?php echo @$user -> error; ?></p>
         <p class="success"><?php echo @$user -> success; ?></p>

@@ -36,7 +36,7 @@
         <label for="pwd">Password:</label>
         <input type="password" name="pwd" required>
 
-        <button type="submit" name="submit">Log in</button>
+        <button type="submit" name="submit"  class="ltr-btn register-btn">Log in</button>
 
         <p class="error"><?php echo @$user -> error; ?></p>
         <p class="success"><?php echo @$user -> success; ?></p>

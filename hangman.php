@@ -293,7 +293,7 @@ function setGameOver()
     <h1>Hangman</h1>
 </div>
 
-<div class="chalkboard-container">
+<div class="chalkboard-container game">
 
     <div class="img-container">
         <img class="img" src="<?php echo getAnimFrame(getNextAnim());?>" alt="HangmanPic">
@@ -360,17 +360,6 @@ function setGameOver()
         echo '<p class="hint">'. $hint . '</p>'
         ?>
     </div>
-
-<!--    <div class="used-letters-container">-->
-<!--        --><?php
-//        for ($i = 0; $i <= 7; $i++): $guess = getGuesses(); ?>
-<!--        --><?php //if(in_array($guess, getGuesses())): ?>
-<!--            <span>--><?php //echo $guess;?><!--</span>-->
-<!--            --><?php //else: ?>
-<!--                <span class="letter">&nbsp;&nbsp;</span>-->
-<!--            --><?php //endif; ?>
-<!--        --><?php //endfor; ?>
-<!--    </div>-->
 
     <div class="instructions-container">
         <p>Hangman is a word guessing game with a grim theme.</p>

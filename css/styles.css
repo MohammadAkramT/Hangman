@@ -13,21 +13,26 @@ hr {
 
 .title-container {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.69rem;
+  font-weight: bolder;
   margin: 0 auto;
-  font-family: 'Sacramento', cursive;
+  font-family: 'Bradley Hand ITC', cursive;
   color: darkslategrey;
   text-decoration: underline;
 }
 
 .chalkboard-container {
-  margin: auto 6%;
+  margin: 0 auto 0 auto;
   background: darkslategrey;
   width: 85%;
   height: 65%;
   border: 20px solid peru;
   border-radius: 10px;
   position: relative;
+}
+
+.game{
+  zoom: 0.75;
 }
 
 .img-container {
@@ -99,24 +104,6 @@ hr {
   opacity: 0
 }
 
-/*@keyframes fade-away {*/
-/*  from{*/
-/*    opacity: 100%;*/
-/*  }*/
-/*  to{*/
-/*    opacity: 0;*/
-/*  }*/
-/*}*/
-
-/*@keyframes fade-back {*/
-/*  from{*/
-/*    opacity: 0;*/
-/*  }*/
-/*  to{*/
-/*    opacity: 100%;*/
-/*  }*/
-/*}*/
-
 .keyboard-container {
   text-align: center;
   position: absolute;
@@ -134,7 +121,7 @@ hr {
 
 .level-select-container {
   width: 40%;
-  margin: 3rem 10%;
+  margin: 3rem 10% 1rem 10%;
   display: block;
 }
 
@@ -144,6 +131,20 @@ hr {
   border-bottom: .2rem solid antiquewhite;
   display: inline-block;
   margin: 10px 10px 0 0;
+}
+
+.used-letters-container{
+  text-align: center;
+  font-size: 2rem;
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  color: darkred;
+  font-family: 'Fuzzy Bubbles', cursive;
+}
+
+.name{
+  font-weight: bolder;
+  text-decoration: underline;
 }
 
 .won {
@@ -162,17 +163,30 @@ hr {
   text-align: center;
   color: darkslategrey;
   font-family: Verdana, sans-serif;
-  position: fixed;
+  position: static;
+  margin-top: 2rem;
   bottom: 0;
   width: 100%;
+}
+
+.foot a:link{
+  text-decoration: none;
+  color: darkslategrey;
+}
+
+.foot a:visited{
+  text-decoration: none;
+  color: darkslategrey;
 }
 
 .leaderboard-link {
   font-family: 'Fuzzy Bubbles', cursive;
   color: peru;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   margin-top: 0;
 }
+
+
 
 .leaderboard-table {
   margin: auto;
@@ -262,6 +276,10 @@ hr {
   font-size: 1rem;
 }
 
+.copyright{
+  margin-top: 0;
+}
+
 .ltr-btn {
   background: #DEB887;
   background-image: -webkit-linear-gradient(top, #DEB887, #755226);
@@ -291,6 +309,11 @@ hr {
   font-size: 1.8rem;
   bottom: -5rem;
   right: 6.1rem;
+}
+
+.register-btn{
+  width: 6rem;
+  font-size: 1rem;
 }
 
 .ltr-btn:hover {
